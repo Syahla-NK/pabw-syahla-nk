@@ -10,3 +10,8 @@ Topik: koleksi buku di rak saya.
  Kolom tabel: judul, penulis, tahun terbit, status baca
  Kolom form: judul, penulis, status baca
  Gambar: koleksi-1.webp
+
+## Catatan penggunaan AI
+
+Struktur HTML disusun dengan bantuan AI berdasarkan worksheet P3.
+Isi data buku saya tulis sendiri.
