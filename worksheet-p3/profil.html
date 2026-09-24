@@ -81,10 +81,34 @@
 
     <section id="tambah-buku">
       <h2>Tambah Buku</h2>
+
+
+      <form action="/simpan" method="post">
+        <p>
+         <label for="judul-buku">Judul Buku</label>
+         <input type="text" id="judul-buku" name="judul-buku" required>
+      </p>
+      <p>
+        <label for="penulis">Penulis</label>
+        <input type="text" id="penulis" name="penulis" required>
+      </p>
+      <p>
+        <label for="status-baca">Status Baca</label>
+        <select id="status-baca" name="status-baca" required>
+          <option value="">-- Pilih --</option>
+          <option value="sudah">Sudah dibaca</option>
+          <option value="sedang">Sedang dibaca</option>
+          <option value="belum">Belum dibaca</option>
+        </select>
+      </p>
+      <button type="submit">Simpan</button>
+     </form>
     </section>
 
     <section id="tentang-saya">
       <h2>Tentang Saya</h2>
+      <p> Halo, saya Syahla Nadia Khoirunnisa. Saya suka membaca novel. Halaman ini saya buat untuk mencatat koleksi buku pribadi Saya
+      <p>
     </section>
 
   </main>
