@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rak Buku Saya</title>
+</head>
+<body>
+
+  <header>
+    <h1>Rak Buku Saya</h1>
+    <nav aria-label="Navigasi utama">
+      <ul>
+        <li><a href="#daftar-buku">Daftar Buku</a></li>
+        <li><a href="#tambah-buku">Tambah Buku</a></li>
+        <li><a href="#tentang-saya">Tentang Saya</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="daftar-buku">
+      <h2>Daftar Buku</h2>
+
+      <table>
+        <caption>Koleksi buku yang saya miliki</caption>
+        <thead>
+          <tr>
+            <th scope="col">Judul</th>
+            <th scope="col">Penulis</th>
+            <th scope="col">Tahun Terbit</th>
+            <th scope="col">Status Baca</th>
+         </tr>
+       </thead>
+       <tbody>
+        <tr>
+          <th scope="row">Laut bercerita</th>
+          <td>Leila S. Chudori</td>
+          <td>2017</td>
+          <td>Sudah dibaca</td>
+        </tr>
+        <tr>
+          <th scope="row">Cantik Itu Luka</th>
+          <td>Eka Kurniawan</td>
+          <td>2002</td>
+          <td>Sudah dibaca</td>
+        </tr>
+        <tr>
+          <th scope="row">Yang Telah Lama Pergi</th>
+          <td>Tere Liye</td>
+          <td>2021</td>
+          <td>Sedang dibaca</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <figure>
+      <img src="laut-bercerita.jpeg"
+           alt="sampul buku laut bercerita karya Leila S. Chudori"
+           width="640" height="360" loading="lazy">
+      <figcaption>Laut Bercerita</figcaption>
+     </figure>
+
+
+     <figure>
+      <img src="Cantik-Itu-Luka.jpg"
+           alt="sampul buku Cantik Itu Luka karya Eka Kurniawan"
+           width="640" height="360" loading="lazy">
+      <figcaption>Cantik itu luka</figcaption>
+     </figure>
+
+     <figure>
+      <img src="yang-telah-lama-pergi.jpg"
+           alt="sampul buku yang telah lama pergi karya Tere Liye"
+           width="640" height="360" loading="lazy">
+      <figcaption>Yang Telah Lama Pergi</figcaption>
+     </figure>
+
+    </section>
+
+    <section id="tambah-buku">
+      <h2>Tambah Buku</h2>
+
+
+      <form action="/simpan" method="post">
+        <p>
+         <label for="judul-buku">Judul Buku</label>
+         <input type="text" id="judul-buku" name="judul-buku" required>
+      </p>
+      <p>
+        <label for="penulis">Penulis</label>
+        <input type="text" id="penulis" name="penulis" required>
+      </p>
+      <p>
+        <label for="status-baca">Status Baca</label>
+        <select id="status-baca" name="status-baca" required>
+          <option value="">-- Pilih --</option>
+          <option value="sudah">Sudah dibaca</option>
+          <option value="sedang">Sedang dibaca</option>
+          <option value="belum">Belum dibaca</option>
+        </select>
+      </p>
+      <button type="submit">Simpan</button>
+     </form>
+    </section>
+
+    <section id="tentang-saya">
+      <h2>Tentang Saya</h2>
+      <p> Halo, saya Syahla Nadia Khoirunnisa. Saya suka membaca novel. Halaman ini saya buat untuk mencatat koleksi buku pribadi Saya
+      <p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Syahla Nadia Khoirunnisa &middot; 25523059 &middot; 2026</p>
+  </footer>
+
+</body>
+</html>
