@@ -1,1 +1,31 @@
-/* tema.css */
+/* Tema gelap otomatis — ikut pengaturan sistem */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #0F172A;
+    --color-fg: #E2E8F0;
+    --color-surface: #1E293B;
+    --color-border: #475569;
+    --color-primary: #F472B6;
+    --color-danger: #FF8A8A;
+    --color-focus: #FBBF24;
+    --shadow-1: 0 1px 3px rgb(0 0 0 / .45);
+  }
+}
+
+/* Tombol pengalih tema */
+.pengalih-tema {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Pilihan manual — HARUS setelah media query */
+:root:has(#tema:checked) {
+  --color-bg: #0F172A;
+  --color-fg: #E2E8F0;
+  --color-surface: #1E293B;
+  --color-border: #475569;
+  --color-primary: #F472B6;
+  --color-danger: #FF8A8A;
+  --color-focus: #FBBF24;
+}
