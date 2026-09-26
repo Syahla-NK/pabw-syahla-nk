@@ -32,3 +32,17 @@ Isi data buku saya tulis sendiri.
 | --space-4 | 1rem | jarak standar antar elemen |
 
 kriteria selesai saya: mengubah --color-primary di satu baris harus mengubah warna tombol, tautan, judul, dan garis fokus.
+
+## Pengungkapan AI
+
+Bagian yang dibantu AI:
+- Struktur awal `tokens.css` (dua lapis: primitif & semantik)
+- Penjelasan konsep design token, kontras, dan `:user-invalid`
+- Debugging typo (`pengalihan-tema` → `pengalih-tema`, `<input>` → `<label>`)
+- Panduan langkah demi langkah pengerjaan Lembar A–G
+
+Bagian yang saya kerjakan sendiri:
+- Pemilihan warna utama (#C51662) dan uji kontras di WebAIM
+- Penulisan `profil.html` (struktur semantik, form, tabel)
+- Pengujian di browser (Network, Elements, Lighthouse)
+- Commit Git dan penilaian mandiri
