@@ -1,4 +1,11 @@
-/* Navbar */
+/* KERANGKA HALAMAN (GRID) */
+.page {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100dvh;
+}
+
+/* HEADER / NAVBAR (FLEX) */
 header {
   padding-block: var(--space-4);
   border-bottom: 1px solid var(--color-border);
@@ -28,31 +35,16 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Bagian dan katalog */
+/* ISI HALAMAN (GRID) */
 main {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: var(--section-gap);
   padding-block: var(--space-6);
 }
 
-.katalog {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-4);
-}
-
-.kartu {
-  flex: 1 1 16rem;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-1);
-  padding: var(--card-pad);
-}
-
+/* FOOTER */
 footer {
-  margin-top: var(--space-6);
   padding-block: var(--space-4);
   border-top: 1px solid var(--color-border);
   color: var(--color-fg);
