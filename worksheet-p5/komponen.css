@@ -113,3 +113,8 @@ caption {
   margin-bottom: var(--space-2);
   text-align: left;
 }
+
+/* PENEMPATAN */
+.sorotan {
+  grid-column: span 2;
+}

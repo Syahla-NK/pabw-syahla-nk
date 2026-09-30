@@ -38,7 +38,7 @@ nav a:hover {
 /* ISI HALAMAN (GRID) */
 main {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: var(--section-gap);
   padding-block: var(--space-6);
 }
