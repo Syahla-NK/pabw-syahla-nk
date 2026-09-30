@@ -54,3 +54,14 @@ Bagian yang saya kerjakan sendiri:
 - Navbar: flex
 - Isi: grid
 - Galeri: grid repeat(auto-fit, minmax(16rem, 1fr))
+
+## Pertemuan 5 – Layout Flexbox dan Grid
+
+- Kerangka halaman pakai grid: `auto 1fr auto` baris + `1fr 1fr` kolom
+- Navbar pakai flex, galeri pakai grid auto-fit
+- Penempatan pakai `grid-column: span 2`
+
+### Catatan penggunaan AI
+
+Struktur CSS (layout.css dan komponen.css) disusun dengan bantuan AI
+berdasarkan worksheet P5. Isi konten, data buku, dan gambar milik saya sendiri.
