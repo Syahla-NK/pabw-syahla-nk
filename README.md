@@ -46,3 +46,11 @@ Bagian yang saya kerjakan sendiri:
 - Penulisan `profil.html` (struktur semantik, form, tabel)
 - Pengujian di browser (Network, Elements, Lighthouse)
 - Commit Git dan penilaian mandiri
+
+## pertemuan ke 5 - Rencana Kerangka
+
+- Baris halaman: auto / 1fr / auto
+- Kolom isi: 16rem 1fr
+- Navbar: flex
+- Isi: grid
+- Galeri: grid repeat(auto-fit, minmax(16rem, 1fr))
