@@ -65,3 +65,17 @@ Bagian yang saya kerjakan sendiri:
 
 Struktur CSS (layout.css dan komponen.css) disusun dengan bantuan AI
 berdasarkan worksheet P5. Isi konten, data buku, dan gambar milik saya sendiri.
+
+## Pertemuan 6 – Responsif Mobile-First
+
+- Baris meta viewport terpasang di `profil.html`
+- File baru: `responsif.css`
+- Gaya dasar: 1 kolom untuk layar sempit
+- Titik henti: 48rem (tablet, galeri 2 kolom) & 60rem (desktop, sidebar + konten)
+- Gambar dibatasi `max-width: 100%`, tabel pakai `.table-wrap` dengan `overflow-x: auto`
+- Tidak ada gulir mendatar di 360 px, 768 px, dan 1280 px
+
+### Catatan penggunaan AI
+
+Struktur `responsif.css` (viewport, gaya dasar, dua titik henti) disusun
+dengan bantuan AI berdasarkan worksheet P6. 
