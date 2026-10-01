@@ -16,3 +16,20 @@ main {
   grid-template-columns: 1fr;
   gap: var(--space-4);
 }
+
+/* TABLET: mulai 48rem */
+@media (min-width: 48rem) {
+  .galeri {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* DESKTOP: mulai 60rem */
+@media (min-width: 60rem) {
+  main {
+    grid-template-columns: 16rem 1fr;
+  }
+  .galeri {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
