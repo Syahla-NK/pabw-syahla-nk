@@ -33,3 +33,20 @@ main {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* GAMBAR: batasi biar nggak melebihi wadah */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* TABEL LEBAR: bisa digulir sendiri */
+.table-wrap {
+  overflow-x: auto;
+}
+
+/* TEKS: pakai rem biar ikut membesar */
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
