@@ -43,3 +43,5 @@ console.log(katalog);
 
 const judul = daftarProyek.map((proyek) => proyek.judul);
 console.log(judul);
+
+console.log(profil.alamat?.kota);   // undefined (nggak error)
