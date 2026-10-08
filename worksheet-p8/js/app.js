@@ -13,7 +13,7 @@ console.log(typeof jumlahProyek);
 const kalimat = `Nama saya ${profil.nama}, dan saya belajar ${profil.keahlian.length} hal.`;
 console.log(kalimat);
 
-// 1. Fungsi kalimat perkenalan
+// 1. Fungsi kalimat perkenalan (lembar c)
 function buatPerkenalan({ nama, peran }) {
   return `${nama} — ${peran}`;
 }
@@ -23,3 +23,23 @@ const formatKeahlian = (daftar) => daftar.join(" · ");
 
 console.log(buatPerkenalan(profil));
 console.log(formatKeahlian(profil.keahlian));
+
+
+// Array of object (lembar d)
+const daftarProyek = [
+  { judul: "Halaman Profil", tahun: 2026, selesai: true },
+  { judul: "Katalog Buku", tahun: 2026, selesai: true },
+  { judul: "Aplikasi Todo", tahun: 2026, selesai: false },
+];
+
+console.table(profil.keahlian);
+console.table(daftarProyek);
+
+const selesai = daftarProyek.filter((proyek) => proyek.selesai);
+console.table(selesai);
+
+const katalog = daftarProyek.find((proyek) => proyek.judul === "Katalog Buku");
+console.log(katalog);
+
+const judul = daftarProyek.map((proyek) => proyek.judul);
+console.log(judul);
