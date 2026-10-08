@@ -16,37 +16,3 @@ main {
   grid-template-columns: 1fr;
   gap: var(--space-4);
 }
-
-/* TABLET: mulai 48rem */
-@media (min-width: 48rem) {
-  .galeri {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* DESKTOP: mulai 60rem */
-@media (min-width: 60rem) {
-  main {
-    grid-template-columns: 16rem 1fr;
-  }
-  .galeri {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* GAMBAR: batasi biar nggak melebihi wadah */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* TABEL LEBAR: bisa digulir sendiri */
-.table-wrap {
-  overflow-x: auto;
-}
-
-/* TEKS: pakai rem biar ikut membesar */
-p {
-  font-size: 1rem;
-  line-height: 1.6;
-}
