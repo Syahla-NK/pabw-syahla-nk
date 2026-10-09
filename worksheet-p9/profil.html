@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rak Buku Saya</title>
+
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="komponen.css">
+  <link rel="stylesheet" href="tema.css">
+  <link rel="stylesheet" href="responsif.css">
+</head>
+<body>
+
+  <header>
+    <input type="checkbox" id="tema" class="pengalih-tema">
+    <label for="tema" class="tombol-tema">Tema gelap</label>
+
+    <div class="header-baris">
+    <h1>Rak Buku Saya</h1>
+    <nav aria-label="Navigasi utama">
+      <ul>
+        <li><a href="#daftar-buku">Daftar Buku</a></li>
+        <li><a href="#tambah-buku">Tambah Buku</a></li>
+        <li><a href="#tentang-saya">Tentang Saya</a></li>
+      </ul>
+    </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section id="daftar-buku">
+      <h2>Daftar Buku</h2>
+
+      <table>
+        <caption>Koleksi buku yang saya miliki</caption>
+        <thead>
+          <tr>
+            <th scope="col">Judul</th>
+            <th scope="col">Penulis</th>
+            <th scope="col">Tahun Terbit</th>
+            <th scope="col">Status Baca</th>
+         </tr>
+       </thead>
+       <tbody>
+        <tr>
+          <th scope="row">Laut bercerita</th>
+          <td>Leila S. Chudori</td>
+          <td>2017</td>
+          <td>Sudah dibaca</td>
+        </tr>
+        <tr>
+          <th scope="row">Cantik Itu Luka</th>
+          <td>Eka Kurniawan</td>
+          <td>2002</td>
+          <td>Sudah dibaca</td>
+        </tr>
+        <tr>
+          <th scope="row">Yang Telah Lama Pergi</th>
+          <td>Tere Liye</td>
+          <td>2021</td>
+          <td>Sedang dibaca</td>
+        </tr>
+          <th scope="row">Malioboro at Midnight</th>
+          <td>Skysphire</td>
+          <td>2003</td>
+          <td>Belum dibaca</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <figure>
+      <img src="laut-bercerita.jpeg"
+           alt="sampul buku laut bercerita karya Leila S. Chudori"
+           width="640" height="360" loading="lazy">
+      <figcaption>Laut Bercerita</figcaption>
+     </figure>
+
+
+     <figure>
+      <img src="Cantik-Itu-Luka.jpg"
+           alt="sampul buku Cantik Itu Luka karya Eka Kurniawan"
+           width="640" height="360" loading="lazy">
+      <figcaption>Cantik itu luka</figcaption>
+     </figure>
+
+     <figure>
+      <img src="yang-telah-lama-pergi.jpg"
+           alt="sampul buku yang telah lama pergi karya Tere Liye"
+           width="640" height="360" loading="lazy">
+      <figcaption>Yang Telah Lama Pergi</figcaption>
+     </figure>
+
+     <figure>
+      <img src="Malioboro-at-midnight.jpg"
+           alt="sampul buku Malioboro at midnight karya Skysphire"
+           width="640" height="360" loading="lazy">
+      <figcaption>Malioboro at Midnight</figcaption>
+     </figure>
+
+    </section>
+
+    <section id="tambah-buku" class="sorotan">
+      <h2>Tambah Buku</h2>
+
+
+      <form action="/simpan" method="post">
+        <div class="form-kolom">
+         <label for="judul-buku">Judul Buku</label>
+         <input type="text" id="judul-buku" name="judul-buku" required>
+        </div>
+      <div class="form-kolom">
+        <label for="penulis">Penulis</label>
+        <input type="text" id="penulis" name="penulis" required>
+      </div>
+      <div class="form-kolom">
+        <label for="status-baca">Status Baca</label>
+        <select id="status-baca" name="status-baca" required>
+          <option value="">-- Pilih --</option>
+          <option value="sudah">Sudah dibaca</option>
+          <option value="sedang">Sedang dibaca</option>
+          <option value="belum">Belum dibaca</option>
+        </select>
+    </div>
+      <button type="submit">Simpan</button>
+     </form>
+    </section>
+
+    <section id="tentang-saya" class="sorotan">
+      <h2>Tentang Saya</h2>
+      <p> Halo, saya Syahla Nadia Khoirunnisa. Saya suka membaca novel. Halaman ini saya buat untuk mencatat koleksi buku pribadi Saya
+    </section>
+
+    <section>
+  <h2>Proyek</h2>
+  <div id="filter">
+    <button data-kategori="semua" class="aktif">Semua</button>
+    <button data-kategori="web">Web</button>
+    <button data-kategori="data">Data</button>
+  </div>
+  <ul id="daftar"></ul>
+  <p id="pesan-kosong" hidden>Tidak ada proyek pada kategori itu.</p>
+</section>
+
+  </main>
+
+  <footer>
+    <p>Syahla Nadia Khoirunnisa &middot; 25523059 &middot; 2026</p>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/dom.js"></script>
+</body>
+</html>
