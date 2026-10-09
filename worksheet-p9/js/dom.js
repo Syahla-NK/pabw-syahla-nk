@@ -38,7 +38,38 @@ barisFilter.addEventListener("click", (event) => {
   const terpilih = daftarProyek.filter(
     (proyek) => kategori === "semua" || proyek.kategori === kategori
   );
-  
+
   tandaiTombolAktif(tombol);
   render(terpilih);
+});
+
+const form = document.querySelector("form");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const judul = document.querySelector("#judul-buku");
+  const penulis = document.querySelector("#penulis");
+
+  // Reset dulu
+  judul.removeAttribute("aria-invalid");
+  penulis.removeAttribute("aria-invalid");
+
+  // Cek judul
+  if (judul.value.trim() === "") {
+    judul.setAttribute("aria-invalid", "true");
+    judul.focus();
+    return;
+  }
+
+  // Cek penulis
+  if (penulis.value.trim() === "") {
+    penulis.setAttribute("aria-invalid", "true");
+    penulis.focus();
+    return;
+  }
+
+  // Semua sah
+  form.reset();
+  console.log("Form sah, siap dikirim");
 });

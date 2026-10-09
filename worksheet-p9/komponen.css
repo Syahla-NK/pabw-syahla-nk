@@ -123,3 +123,8 @@ caption {
   outline: 2px solid currentColor;
   outline-offset: 2px;
 }
+
+[aria-invalid="true"] {
+  border-color: var(--color-danger);
+  border-width: 2px;
+}
