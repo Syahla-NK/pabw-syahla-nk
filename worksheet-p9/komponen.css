@@ -118,3 +118,8 @@ caption {
 .sorotan {
   grid-column: span 2;
 }
+
+.aktif {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
