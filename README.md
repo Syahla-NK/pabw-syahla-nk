@@ -74,3 +74,22 @@ dengan bantuan AI berdasarkan worksheet P6. Isi konten milik saya sendiri.
 - Isi data (nama, keahlian, daftar proyek)
 - Penjelasan galat di Lembar E
 - Screenshot Console
+
+## Pertemuan 9 – DOM dan Event
+
+- Data buku dari `app.js` dirender ke halaman pakai `createElement` dan `append`
+- Wadah dikosongkan di baris pertama `render()`
+- Filter kategori (Fiksi/Non-Fiksi) pakai satu pendengar di `#filter` (event delegation)
+- Form divalidasi per kolom dengan `preventDefault()`
+
+### Catatan penggunaan AI – Pertemuan 9
+
+**Dibantu AI:**
+- Struktur `dom.js` (render, event delegation, validasi)
+- Konsep `event.target.closest("button")`
+
+**Dikerjakan sendiri:**
+- Data buku di `app.js` dan `profil.html`
+- Isi kategori tiap buku
+- Screenshot Console
+- tambahan buku non-fiksi
