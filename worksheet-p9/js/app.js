@@ -27,9 +27,12 @@ console.log(formatKeahlian(profil.keahlian));
 
 // Array of object (lembar d)
 export const daftarProyek = [
-  { judul: "Halaman Profil", tahun: 2026, selesai: true, kategori: "web" },
-  { judul: "Katalog Buku", tahun: 2026, selesai: true, kategori: "data" },
-  { judul: "Aplikasi Todo", tahun: 2026, selesai: false, kategori: "web" },
+  { judul: "Laut Bercerita", tahun: 2017, kategori: "fiksi" },
+  { judul: "Cantik Itu Luka", tahun: 2002, kategori: "fiksi" },
+  { judul: "Yang Telah Lama Pergi", tahun: 2021, kategori: "fiksi" },
+  { judul: "Malioboro at Midnight", tahun: 2023, kategori: "fiksi" },
+  { judul: "4 Masa 1 Mimpi", tahun: 2023, kategori: "non-fiksi" },
+  { judul: "172 days", tahun: 2022, kategori: "non-fiksi" },
 ];
 
 console.table(profil.keahlian);
