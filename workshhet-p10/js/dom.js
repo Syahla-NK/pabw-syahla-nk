@@ -77,6 +77,7 @@ form.addEventListener("submit", (event) => {
 
 ambilNotisia().then((data) => {
   console.log('data dari API:', data);
+  console.log('data[0]:', data[0]);
 }).catch((galat) => {
   console.error('gagal:', galat);
 });
