@@ -1,5 +1,5 @@
 import { daftarProyek } from "./app.js";
-import { muat } from './api.js';
+import { ambilNotisia } from './api.js';
 
 const wadah = document.querySelector("#daftar");
 const kosong = document.querySelector("#pesan-kosong");
@@ -75,10 +75,8 @@ form.addEventListener("submit", (event) => {
   console.log("Form sah, siap dikirim");
 });
 
-muat().then((data) => {
+ambilNotisia().then((data) => {
   console.log('data dari API:', data);
 }).catch((galat) => {
   console.error('gagal:', galat);
 });
-
-window.muat = muat;
