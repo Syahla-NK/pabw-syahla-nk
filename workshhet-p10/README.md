@@ -93,3 +93,17 @@ dengan bantuan AI berdasarkan worksheet P6. Isi konten milik saya sendiri.
 - Isi kategori tiap buku
 - Screenshot Console
 - tambahan buku non-fiksi
+
+### Catatan penggunaan AI – Pertemuan 10
+
+**Dibantu AI:**
+- Struktur `api.js` (fetch, cek `respons.ok`, `json()`)
+- Struktur `dom.js` (render data + 4 keadaan: memuat, berhasil, gagal, kosong)
+- Konsep `try/catch` dan `event delegation`
+
+**Dikerjakan sendiri:**
+- Pilih API publik (`jsonplaceholder.typicode.com/posts`)
+- Isi `ALAMAT` di `api.js`
+- Test galat: alamat salah, offline, data kosong
+- Screenshot 4 keadaan
+- Isi worksheet
