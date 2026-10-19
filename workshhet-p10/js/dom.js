@@ -1,83 +1,33 @@
-import { daftarProyek } from "./app.js";
 import { ambilNotisia } from './api.js';
 
-const wadah = document.querySelector("#daftar");
-const kosong = document.querySelector("#pesan-kosong");
+const wadah = document.querySelector('#daftar');
 
-function buatKartu(proyek) {
-  const li = document.createElement("li");
-  li.className = "kartu";
-  li.textContent = proyek.judul;
-  return li;
-}
-
-function render(daftar) {
-  wadah.textContent = "";
-  if (daftar.length === 0) {
-    kosong.hidden = false;
-    return;
-  }
-  kosong.hidden = true;
-  daftar.forEach((proyek) => wadah.append(buatKartu(proyek)));
-}
-
-render(daftarProyek);
-
-function tandaiTombolAktif(tombolAktif) {
-  document.querySelectorAll("#filter button").forEach((tombol) => {
-    tombol.classList.toggle("aktif", tombol === tombolAktif);
+function gambar(daftar) {
+  wadah.textContent = '';
+  daftar.forEach(function (n) {
+    const kartu = document.createElement('article');
+    const judul = document.createElement('h3');
+    judul.textContent = n.title;
+    kartu.appendChild(judul);
+    wadah.appendChild(kartu);
   });
 }
 
-const barisFilter = document.querySelector("#filter");
+async function tampilkan() {
+  wadah.textContent = 'Memuat...';
 
-barisFilter.addEventListener("click", (event) => {
-  const tombol = event.target.closest("button");
-  if (!tombol) return;
+  try {
+    const daftar = await ambilNotisia();
 
-  const kategori = tombol.dataset.kategori;
-  const terpilih = daftarProyek.filter(
-    (proyek) => kategori === "semua" || proyek.kategori === kategori
-  );
+    if (daftar.length === 0) {
+      wadah.textContent = 'Belum ada notisia';
+      return;
+    }
 
-  tandaiTombolAktif(tombol);
-  render(terpilih);
-});
-
-const form = document.querySelector("form");
-
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  const judul = document.querySelector("#judul-buku");
-  const penulis = document.querySelector("#penulis");
-
-  // Reset dulu
-  judul.removeAttribute("aria-invalid");
-  penulis.removeAttribute("aria-invalid");
-
-  // Cek judul
-  if (judul.value.trim() === "") {
-    judul.setAttribute("aria-invalid", "true");
-    judul.focus();
-    return;
+    gambar(daftar);
+  } catch (galat) {
+    wadah.textContent = 'Gagal memuat data: ' + galat.message;
   }
+}
 
-  // Cek penulis
-  if (penulis.value.trim() === "") {
-    penulis.setAttribute("aria-invalid", "true");
-    penulis.focus();
-    return;
-  }
-
-  // Semua sah
-  form.reset();
-  console.log("Form sah, siap dikirim");
-});
-
-ambilNotisia().then((data) => {
-  console.log('data dari API:', data);
-  console.log('data[0]:', data[0]);
-}).catch((galat) => {
-  console.error('gagal:', galat);
-});
+tampilkan();
