@@ -1,3 +1,10 @@
+import { state } from './state.js';
+import { pasangPendengar } from './events.js';
+import { render } from './dom.js';
+
+pasangPendengar();
+render(state);
+
 const profil = {
   nama: "Syahla Nadia Khoirunnisa",
   peran: "Mahasiswa Informatika yang belajar front-end",
